@@ -19,4 +19,14 @@ def LoadFile(file_name):
     myJournal.close()
     return contents
     
+################################################
+########   Function 3 : UpdateString   #########
+################################################
 
+def UpdateString(in_string,letter,index):
+    my_list = []
+    for i in range(0,len(in_string)):
+        my_list.append(in_string[i])
+    my_list[index] = letter
+    word = ''.join([str(char) for char in my_list])
+    PrintOutput(word)
