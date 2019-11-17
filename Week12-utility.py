@@ -1,3 +1,4 @@
+#https://github.com/morganator420/week12-utility.git
 #Morgan Stoner
 #CSCI 102 - Section E
 #Week 12 - Part A
@@ -93,6 +94,19 @@ def Union(list1,list2):
         else:
            newlist.append(i)
     return newlist
-            
-          
+
+################################################
+########   Function 7 : Intersection   #########
+################################################
+
+def Intersection(list1,list2):
+    newlist = []
+    for i in list1:
+        for j in list2:
+            if i == j:
+                newlist.append(i)
+    return newlist
+
+
+
     
