@@ -107,6 +107,34 @@ def Intersection(list1,list2):
                 newlist.append(i)
     return newlist
 
+################################################
+########   Function 8 : NotIn          #########
+################################################
+
+def NotIn(list1,list2):
+    newlist = []
+    for i in list1:
+        for j in list2:
+            if i != j:
+                continue
+            else:
+                newlist.append(i)
+    checklist = []
+    for i in range(0,len(list1)):
+        for j in range(0,len(newlist)):
+            if list1[i] == newlist[j]:
+                checklist.append(i)
+    checklist.append(0)
+    for i in range(0,len(checklist) - 1):
+        list1.pop(checklist[i])
+        checklist[i+1] -= 1
+
+    return list1
+
+players = ["Mary", "Cody", "Joe", "Jill", "Xai", "Bodo"]               
+players2 = ["Melvin", "Martian", "Baka", "Xai", "Cody"]
+scores = [5, 8, 10, 6, 10, 4, 10]     
+print("OUTPUT", NotIn(players2, players))
 
 
     
