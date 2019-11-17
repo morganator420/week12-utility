@@ -62,4 +62,37 @@ def ScoreFinder(players,scores,in_string):
         output = in_string + " got a score of " + str(score)
         PrintOutput(output)
 
+################################################
+########   Function 6 : Union          #########
+################################################
 
+def Union(list1,list2):
+    newlist = []
+    check = 'Y'
+    value = "["
+    for i in list1:
+        for j in list2:
+            if i == j:
+                check = 'O'
+        if check == 'O':
+            check = 'Y'
+            value = i
+            continue
+        else:
+           newlist.append(i)
+    if value != "[":
+        newlist.append(value)
+    for i in list2:
+        for j in list1:
+            if i == j:
+                value2 = i
+                check = 'O'
+        if check == 'O':
+            check = 'Y'
+            continue
+        else:
+           newlist.append(i)
+    return newlist
+            
+          
+    
